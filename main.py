@@ -36,10 +36,10 @@ class TaoBaoBase(object):
 
     def __init__(self, perfs=PREFS, mongo_uri=MONGO_URI, mongo_db=MONGO_DB, collection=COLLECTION):
         """
-        :param autimation: 设置为开发者模式，防止被各大网站识别出来使用了Selenium
         :param perfs: 禁止加载图片
-        :param lan: 浏览器语言格式
-        :param ua: 服务器标识浏览器的信息
+        :param mongo_uri mongodb数据库连接地址
+        :param mongo_db 数据库名称
+        :param collection 文档名称
         """
         self.options = webdriver.ChromeOptions()
         self.options.add_experimental_option('excludeSwitches', ['enable-automation'])
